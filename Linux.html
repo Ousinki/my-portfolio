@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux 基础 - Frontend for beginners</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Frontend for beginners</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="HTML.html">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="JavaScript.html">JavaScript</a></li>
+                    <li><a href="VSCode.html">VSCode</a></li>
+                    <li><a href="Linux.html" class="active">Linux</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>Linux 基础教程</h2>
+                <p>学习Linux命令行，掌握开发必备技能</p>
+                <p>Linux是开发者的重要工具，让我们通过实际例子来学习</p>
+            </section>
+
+            <section class="features">
+                <div class="card">
+                    <h3>案例教学</h3>
+                    <p>以下是一些实际的Linux命令示例和交互演示：</p><br>         
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4><ruby>文件操作<rt>File Operations</rt></ruby></h4>
+                            <p>基本的文件和目录操作命令</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ ls -la          # 列出所有文件详细信息<br>
+                                    $ cd /home/user   # 切换目录<br>
+                                    $ pwd             # 显示当前目录<br>
+                                    $ mkdir mydir     # 创建目录<br>
+                                    $ touch file.txt  # 创建文件
+                                </div>
+                                <button onclick="alert('ls -la 命令会显示文件的详细信息，包括权限、大小、修改时间等')" 
+                                        class="linux-button">
+                                    了解 ls 命令
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>文本处理<rt>Text Processing</rt></ruby></h4>
+                            <p>查看和编辑文本文件</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ cat file.txt    # 显示文件内容<br>
+                                    $ head -n 10 file.txt  # 显示前10行<br>
+                                    $ tail -n 10 file.txt  # 显示后10行<br>
+                                    $ grep "keyword" file.txt  # 搜索关键词
+                                </div>
+                                <div class="linux-tip">
+                                    <p>💡 grep 命令是文本搜索的强大工具</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>系统信息<rt>System Info</rt></ruby></h4>
+                            <p>查看系统状态和进程</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ ps aux          # 查看所有进程<br>
+                                    $ top             # 实时查看系统状态<br>
+                                    $ df -h           # 查看磁盘使用情况<br>
+                                    $ free -h         # 查看内存使用情况
+                                </div>
+                                <button onclick="alert('top 命令会实时显示系统进程和资源使用情况，按 q 退出')" 
+                                        class="linux-button linux-button-success">
+                                    了解 top 命令
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>权限管理<rt>Permission Management</rt></ruby></h4>
+                            <p>文件和目录权限设置</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ chmod 755 file.txt     # 设置文件权限<br>
+                                    $ chmod +x script.sh    # 添加执行权限<br>
+                                    $ sudo command           # 以管理员身份执行<br>
+                                    $ su - username          # 切换用户
+                                </div>
+                                <div class="linux-warning">
+                                    <p>⚠️ sudo 命令需要谨慎使用，确保了解命令的作用</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>网络操作<rt>Network Operations</rt></ruby></h4>
+                            <p>网络相关命令</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ ping google.com         # 测试网络连接<br>
+                                    $ wget url               # 下载文件<br>
+                                    $ curl -I url            # 获取HTTP头信息<br>
+                                    $ ssh user@host          # SSH连接
+                                </div>
+                                <button onclick="alert('ping 命令用于测试网络连通性，按 Ctrl+C 停止')" 
+                                        class="linux-button linux-button-danger">
+                                    测试网络
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>包管理<rt>Package Management</rt></ruby></h4>
+                            <p>软件包安装和管理</p>
+                            <div class="linux-demo-container">
+                                <h5 class="linux-subtitle">Ubuntu/Debian:</h5>
+                                <div class="linux-terminal">
+                                    $ sudo apt update        # 更新包列表<br>
+                                    $ sudo apt install package  # 安装软件包<br>
+                                    $ sudo apt remove package   # 卸载软件包
+                                </div>
+                                <h5 class="linux-subtitle">CentOS/RHEL:</h5>
+                                <div class="linux-terminal">
+                                    $ sudo yum install package  # 安装软件包<br>
+                                    $ sudo yum remove package   # 卸载软件包
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>压缩解压<rt>Compression</rt></ruby></h4>
+                            <p>文件压缩和解压缩</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ tar -czf archive.tar.gz files/  # 创建压缩包<br>
+                                    $ tar -xzf archive.tar.gz         # 解压缩包<br>
+                                    $ zip -r archive.zip files/       # 创建zip压缩包<br>
+                                    $ unzip archive.zip               # 解压zip文件
+                                </div>
+                                <div class="linux-info">
+                                    <p>📦 tar 命令是Linux中最常用的压缩工具</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>环境变量<rt>Environment Variables</rt></ruby></h4>
+                            <p>设置和使用环境变量</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ echo $PATH           # 查看PATH环境变量<br>
+                                    $ export VAR=value     # 设置环境变量<br>
+                                    $ env                  # 查看所有环境变量<br>
+                                    $ alias ll='ls -la'    # 创建命令别名
+                                </div>
+                                <button onclick="alert('环境变量是系统配置的重要部分，PATH变量决定了系统在哪里查找可执行文件')" 
+                                        class="linux-button linux-button-secondary">
+                                    了解环境变量
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>管道和重定向<rt>Pipes & Redirection</rt></ruby></h4>
+                            <p>命令组合和数据流控制</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    $ ls -la | grep txt    # 管道操作<br>
+                                    $ command > file.txt   # 输出重定向到文件<br>
+                                    $ command >> file.txt  # 追加输出到文件<br>
+                                    $ command < input.txt  # 从文件读取输入
+                                </div>
+                                <div class="linux-pipe-tip">
+                                    <p>🔗 管道 | 可以将一个命令的输出作为另一个命令的输入</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>实用技巧<rt>Practical Tips</rt></ruby></h4>
+                            <p>提高效率的Linux技巧</p>
+                            <div class="linux-demo-container">
+                                <h5 class="linux-subtitle">快捷键：</h5>
+                                <ul class="linux-list">
+                                    <li><code>Ctrl + C</code> - 中断当前命令</li>
+                                    <li><code>Ctrl + D</code> - 退出终端</li>
+                                    <li><code>Ctrl + L</code> - 清屏</li>
+                                    <li><code>Tab</code> - 命令补全</li>
+                                    <li><code>↑/↓</code> - 历史命令</li>
+                                </ul>
+                                <button onclick="alert('Tab键是Linux中最有用的快捷键之一，可以自动补全命令和文件名')" 
+                                        class="linux-button linux-button-info">
+                                    学习快捷键
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>脚本编程<rt>Shell Scripting</rt></ruby></h4>
+                            <p>简单的Shell脚本示例</p>
+                            <div class="linux-demo-container">
+                                <div class="linux-terminal">
+                                    #!/bin/bash<br>
+                                    echo "Hello, World!"<br>
+                                    echo "Current date: $(date)"<br>
+                                    echo "Current user: $(whoami)"
+                                </div>
+                                <p class="linux-small-text">
+                                    保存为 .sh 文件，使用 chmod +x 添加执行权限
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>代码示例<rt>Code Example</rt></ruby></h4>
+                            <p>完整的Shell脚本</p>
+                            <div class="linux-code-block">
+                                <pre><code>#!/bin/bash
+# 系统信息脚本
+echo "=== 系统信息 ==="
+echo "主机名: $(hostname)"
+echo "操作系统: $(uname -s)"
+echo "内核版本: $(uname -r)"
+echo "当前用户: $(whoami)"
+echo "当前目录: $(pwd)"
+echo "磁盘使用: $(df -h / | tail -1)"
+echo "内存使用: $(free -h | grep Mem)"</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Frontend for beginners. 学习前端开发的好地方。</p>
+        </div>
+    </footer>
+</body>
+</html>

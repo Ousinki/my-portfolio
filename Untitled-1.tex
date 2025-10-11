@@ -1,0 +1,188 @@
+\documentclass{ctexart}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{geometry} % 设置页边距
+\usepackage{lipsum} % 生成虚拟文本
+\usepackage{fancyhdr} % 自定义页眉页脚
+\usepackage{lastpage} 
+\usepackage{comment} % 添加多行注释
+\usepackage{listings} % 添加代码高亮
+\usepackage{xcolor}
+% \usepackage{fontspec}
+% \usepackage{xeCJK}
+\usepackage{minted}
+
+
+\lstset{
+  backgroundcolor=\color{black!5},   % 设置背景色
+  basicstyle=\ttfamily\small,        % 设置代码字体
+  breaklines=true,                   % 自动换行
+  commentstyle=\color{green!80!black}, % 设置注释颜色
+  keywordstyle=\color{blue},         % 设置关键词颜色
+  stringstyle=\color{purple},        % 设置字符串颜色
+  showstringspaces=false,            % 不显示字符串中的空格
+  numbers=left,                      % 在左侧显示行号
+  numberstyle=\tiny\color{gray},     % 行号样式
+  frame=single,                      % 添加边框
+  % --- 下面是新加的关键一行 ---
+  literate={"}{{"}}1 {'}{{'}}1      % 将直角引号正确显示
+}
+
+
+
+\title{LaTeX教程}
+\author{Green Sleeves}
+%\date{July 2025}
+\date{\today}
+
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
+\setlength{\headheight}{12.64723pt}
+%\pagestyle{empty} % 页眉页脚没东西，但页脚中间的1是默认有的
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{myname\_Green}
+\rhead{\LaTeX{}教程}
+\cfoot{第 \thepage 页（共 \pageref*{LastPage} 页）}
+\lstset{basicstyle=\ttfamily}
+% 设置中文字体，确保名称与字体册中的完全一致
+% \setCJKmainfont{方正屏显雅宋简体}
+
+
+
+\begin{document}
+
+% 封面页（不要页码、不计入总页数）
+\pagenumbering{gobble}  % 不显示页码
+\maketitle % 显示信息栏的三行内容:title,author,date
+%\thispagestyle{empty} % 设置该页的页眉页脚样式为 “空”
+
+\newpage
+\pagenumbering{arabic}  % 恢复页码显示
+\setcounter{page}{1}    % 从 1 开始计数
+\tableofcontents % 根据文件大纲生成目录
+
+% 正文开始
+\newpage % 让正文页开启新的一页
+
+\section{章节}
+\subsection{各级标题}
+\lstinline|\section{章}| 
+
+\hspace{2em}\lstinline|\subsection{节}| 
+
+\hspace{4em}\lstinline|\subsubsection{小节}| 
+
+\hspace{6em}\lstinline|\paragraph{段落标题}| 
+
+\hspace{8em}\lstinline|\subparagraph{子段落标题}| 
+
+\vspace{5mm} % 增加 5 毫米的垂直空白
+
+“Sub” 是一个非常常见的英文前缀 (prefix)。它的基本意思是：在...之下 (under, below)；次要的、副的 (secondary, vice-)；部分的 (part of)。\lstinline|\section| 和 \lstinline|\subsection|的这个 sub 就是用来表示层级关系的。
+
+\paragraph{段落标题}与正文内容在同一行。
+
+\subparagraph{子段落标题}与正文内容在同一行，并有首行缩进。
+
+\subsection{代码}
+在 LaTex 中，我们使用 \lstinline|\lstinline| 来输出行内代码。lst 是 listing (列表、清单) 的缩写，在 listings 这个宏包的语境里，它特指“代码清单 (code listing)”；inline 是一个排版和网页设计里的常用词，意思是“行内”。
+
+下面的代码则展示了如何输出代码块：
+\begin{lstlisting}[language=Python]
+print("Hi, lstlisting!")
+\end{lstlisting}
+
+\begin{minted}{javascript}
+    var name = "minted";
+    console.log(name);
+\end{minted}
+
+% 添加了行号(linenos)和边框(frame=lines)
+\begin{minted}[linenos, frame=lines]{javascript}
+    var name = "minted";
+    console.log("Hello, " + name);
+\end{minted}
+
+lstlisting 环境 minted 环境 都是用于输出代码块的，但是有以下区别：
+\begin{itemize}
+    \item 语法高亮：minted 环境支持更丰富的语法高亮，而 listings 环境仅支持有限的语言。
+    \item 代码片段：minted 环境更适合展示完整的代码片段，而 listings 环境更适合展示单行的代码。
+\end{itemize}
+
+lstlisting 内置于 TeX，它完全自给自足，不依赖任何外部件，只要有 LaTeX 就能跑。虽然功能基础，但非常稳定可靠。
+
+minted 需要依赖外部 Python 和 Pygments 库协同工作，配置起来更复杂，但它能提供的性能（高亮效果）远超前者。它需要： 1. 安装 Python 和 Pygments (pip install) 2. 编译器开启 -shell-escape 选项
+
+minted 环境同样提供了专门用来处理行内代码的命令。在 Python 中，我们使用 \mintinline{python}{print("Hello")} 函数来输出文本。对于 JavaScript，可以这样写：调用 \mintinline{javascript}{console.log("Hi")} 函数。C++ 的 main 函数是这样定义的：\mintinline{cpp}|int main() { return 0; }|。
+
+
+\subsection{虚拟文本}
+\lstinline|\lipsum| 用于自动生成一段被称为 “Lorem Ipsum” 的虚拟文本或占位文本 (placeholder text)，一共有150段预定义的虚拟文本。它是一段从古罗马作家西塞罗的文章《论善与恶的极致》中提取出来的拉丁文，但经过了打乱和修改，所以内容是完全无意义的。正因为它无意义，所以读者不会被内容吸引，从而能更好地审视排版和设计。
+
+\lipsum[1] % 生成第1段虚拟文本
+
+\subsection{手书文本}
+这是第一段。
+
+这是第二段。（源代码中空一行，表示换行。）
+
+\subsubsection{格式设置}
+\textbf{加粗} \textit{italic斜体} \underline{下划线} \underline{\textbf{嵌套}}
+% 在overleaf里仍然可以使用快捷键ctrl+B等等
+
+
+\subsubsection{列表}
+\begin{enumerate} % 有序列表
+    \item Enumerate 是一个英文动词，意思是“列举”、“枚举”、“计数”。它的词根和 "number" (数字) 有关。
+    \item Item 是一个英文名词，意思是“项目”、“条目”。
+    \item c
+    \item d
+\end{enumerate}
+
+\begin{itemize} % 无序列表
+    \item Itemize 是一个英文动词，源自名词 item (项目)，意思就是“分条列出”。
+    \item b
+    \item c
+    \item d
+\end{itemize}
+
+
+\begin{figure}[h] % [h] 将图片放置在here
+    \centering % 图片居中
+%    \includegraphics[width=0.1\linewidth]{image.png} 
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+% linewidth 当前容器中的文字宽度（局部）
+
+\newpage
+
+\begin{figure} [b] % [b] 将图片放置在bottom
+    \centering
+%    \includegraphics[width=0.1\textwidth]{image.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+% textwidth 整个页面的文字区宽度（全局）
+
+
+
+\begin{comment}
+这是一个多行注释，
+使用的是 \usepackage{comment} 
+\end{comment}
+
+% 这也是多行注释，
+% 选中文本后，按cmd+/
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+

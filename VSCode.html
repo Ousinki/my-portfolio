@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSCode 使用指南 - Frontend for beginners</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Frontend for beginners</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="HTML.html">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="JavaScript.html">JavaScript</a></li>
+                    <li><a href="VSCode.html" class="active">VSCode</a></li>
+                    <li><a href="Linux.html">Linux</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>VSCode 使用指南</h2>
+                <p>掌握Visual Studio Code，提升开发效率</p>
+                <p>VSCode是现代开发者的首选编辑器，让我们通过实际例子来学习</p>
+            </section>
+
+            <section class="features">
+                <div class="card">
+                    <h3>案例教学</h3>
+                    <p>以下是一些实际的VSCode使用技巧和功能演示：</p><br>         
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4><ruby>自动换行<rt>Word Wrap</rt></ruby></h4>
+                            <p>vscode中一行文本太长，如何不使用左右滚轮，而是转到下一行</p>
+                            <p>Mac 上，快捷键是： Option + Z</p>
+                            <p>按下 Cmd + Shift + P 打开命令面板，输入 word wrap 选择 View: Toggle Word Wrap (视图: 切换自动换行)</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>智能提示<rt>IntelliSense</rt></ruby></h4>
+                            <p>代码自动补全功能</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>自动补全示例：</h5>
+                                <div style="background-color: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                                    <p>输入 <code>doc</code> → 自动提示 <code>document</code></p>
+                                    <p>输入 <code>getEl</code> → 自动提示 <code>getElementById</code></p>
+                                    <p>输入 <code>addEv</code> → 自动提示 <code>addEventListener</code></p>
+                                </div>
+                                <button onclick="alert('VSCode的智能提示让编码更高效！')" 
+                                        style="background-color: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+                                    体验智能提示
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>文件管理<rt>File Management</rt></ruby></h4>
+                            <p>高效的文件操作</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>常用快捷键：</h5>
+                                <p>• <code>Ctrl + P</code> - 快速打开文件</p>
+                                <p>• <code>Ctrl + Shift + P</code> - 命令面板</p>
+                                <p>• <code>Ctrl + B</code> - 切换侧边栏</p>
+                                <p>• <code>Ctrl + `</code> - 切换终端</p>
+                                <div style="background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                                    <p style="margin: 0; font-size: 14px;">💡 提示：使用 Ctrl + P 快速搜索文件</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>插件推荐<rt>Extension Recommendations</rt></ruby></h4>
+                            <p>必备的VSCode插件</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <div style="background-color: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                                    <strong>Live Server</strong> - 本地服务器
+                                </div>
+                                <div style="background-color: #e9ecef; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                                    <strong>Prettier</strong> - 代码格式化
+                                </div>
+                                <div style="background-color: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                                    <strong>ESLint</strong> - 代码检查
+                                </div>
+                                <div style="background-color: #e9ecef; padding: 10px; margin: 5px 0; border-radius: 5px;">
+                                    <strong>Auto Rename Tag</strong> - 自动重命名标签
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>调试功能<rt>Debugging</rt></ruby></h4>
+                            <p>强大的调试工具</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>调试步骤：</h5>
+                                <ol style="margin: 10px 0;">
+                                    <li>在代码行设置断点</li>
+                                    <li>按 <code>F5</code> 开始调试</li>
+                                    <li>使用调试控制台</li>
+                                    <li>监视变量值变化</li>
+                                </ol>
+                                <button onclick="console.log('调试信息：VSCode调试功能很强大！')" 
+                                        style="background-color: #28a745; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+                                    测试调试
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>代码片段<rt>Code Snippets</rt></ruby></h4>
+                            <p>自定义代码模板</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>常用片段：</h5>
+                                <div style="background-color: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                                    <p><code>html</code> → HTML5 基础结构</p>
+                                    <p><code>css</code> → CSS 样式模板</p>
+                                    <p><code>js</code> → JavaScript 函数模板</p>
+                                </div>
+                                <p style="font-size: 12px; color: #666;">输入片段名称后按 Tab 键展开</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>Git集成<rt>Git Integration</rt></ruby></h4>
+                            <p>版本控制功能</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>Git 操作：</h5>
+                                <p>• <code>Ctrl + Shift + G</code> - 打开源代码管理</p>
+                                <p>• <code>Ctrl + K, Ctrl + S</code> - 暂存更改</p>
+                                <p>• <code>Ctrl + Enter</code> - 提交更改</p>
+                                <div style="background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                                    <p style="margin: 0; font-size: 14px;">📝 左侧面板显示文件修改状态</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>主题定制<rt>Theme Customization</rt></ruby></h4>
+                            <p>个性化界面设置</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>推荐主题：</h5>
+                                <div style="display: flex; gap: 10px; margin: 10px 0;">
+                                    <div style="background-color: #1e1e1e; color: white; padding: 10px; border-radius: 5px; flex: 1;">
+                                        Dark+
+                                    </div>
+                                    <div style="background-color: #ffffff; color: black; padding: 10px; border-radius: 5px; flex: 1;">
+                                        Light+
+                                    </div>
+                                </div>
+                                <p style="font-size: 12px; color: #666;">按 <code>Ctrl + K, Ctrl + T</code> 切换主题</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>工作区设置<rt>Workspace Settings</rt></ruby></h4>
+                            <p>项目配置管理</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>设置文件：</h5>
+                                <div style="background-color: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                                    <code>.vscode/settings.json</code> - 工作区设置<br>
+                                    <code>.vscode/launch.json</code> - 调试配置<br>
+                                    <code>.vscode/tasks.json</code> - 任务配置
+                                </div>
+                                <button onclick="alert('VSCode工作区设置让团队协作更高效！')" 
+                                        style="background-color: #dc3545; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+                                    了解设置
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>终端集成<rt>Integrated Terminal</rt></ruby></h4>
+                            <p>内置终端功能</p>
+                            <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+                                <h5>终端操作：</h5>
+                                <p>• <code>Ctrl + `</code> - 打开/关闭终端</p>
+                                <p>• <code>Ctrl + Shift + `</code> - 新建终端</p>
+                                <p>• <code>Ctrl + Shift + C</code> - 复制终端内容</p>
+                                <div style="background-color: #1e1e1e; color: #00ff00; padding: 10px; margin: 10px 0; border-radius: 5px; font-family: monospace;">
+                                    $ npm install<br>
+                                    $ git status<br>
+                                    $ code .
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>代码示例<rt>Code Example</rt></ruby></h4>
+                            <p>VSCode配置文件</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0; background-color: #f8f9fa;">
+                                <pre style="margin: 0; font-size: 12px;"><code>// settings.json
+{
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Frontend for beginners. 学习前端开发的好地方。</p>
+        </div>
+    </footer>
+</body>
+</html>

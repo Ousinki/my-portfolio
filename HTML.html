@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 基础 - Frontend for beginners</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Frontend for beginners</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="HTML.html" class="active">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="JavaScript.html">JavaScript</a></li>
+                    <li><a href="VSCode.html">VSCode</a></li>
+                    <li><a href="Linux.html">Linux</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>HTML 基础教程</h2>
+                <p>学习超文本标记语言的基础知识</p>
+                <p>HTML是构建网页的基础，让我们通过实际例子来学习</p>
+            </section>
+
+            <section class="features">
+                <div class="card">
+                    <h3>案例教学</h3>
+                    <p>以下是一些实际的HTML示例和交互演示：</p><br>         
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4><ruby>标题标签<rt>Heading Tags</rt></ruby></h4>
+                            <p>h1 到 h6 标签</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <h1 style="margin: 5px 0; color: #333;">H1 标题</h1>
+                                <h2 style="margin: 5px 0; color: #555;">H2 标题</h2>
+                                <h3 style="margin: 5px 0; color: #777;">H3 标题</h3>
+                                <h4 style="margin: 5px 0; color: #999;">H4 标题</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>文本格式<rt>Text Formatting</rt></ruby></h4>
+                            <p>各种文本样式</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <p><strong>粗体文本</strong></p>
+                                <p><em>斜体文本</em></p>
+                                <p><u>下划线文本</u></p>
+                                <p><mark>高亮文本</mark></p>
+                                <p><code>代码文本</code></p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>链接演示<rt>Link Demo</rt></ruby></h4>
+                            <p>a 标签的使用</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <a href="https://www.baidu.com" target="_blank" style="color: #007bff;">访问百度</a><br><br>
+                                <a href="#top" style="color: #28a745;">回到顶部</a><br><br>
+                                <a href="mailto:example@email.com" style="color: #dc3545;">发送邮件</a>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>图片展示<rt>Image Display</rt></ruby></h4>
+                            <p>img 标签的使用</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0; text-align: center;">
+                                <img src="https://via.placeholder.com/150x100/007bff/ffffff?text=HTML" 
+                                     alt="HTML示例图片" 
+                                     style="border-radius: 5px;"
+                                     title="这是一个示例图片" />
+                                <p style="font-size: 12px; color: #666; margin-top: 5px;">示例图片</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>列表展示<rt>List Display</rt></ruby></h4>
+                            <p>有序和无序列表</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <h5>无序列表：</h5>
+                                <ul>
+                                    <li>HTML基础</li>
+                                    <li>CSS样式</li>
+                                    <li>JavaScript编程</li>
+                                </ul>
+                                <h5>有序列表：</h5>
+                                <ol>
+                                    <li>学习HTML</li>
+                                    <li>学习CSS</li>
+                                    <li>学习JavaScript</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>表格示例<rt>Table Example</rt></ruby></h4>
+                            <p>table 标签的使用</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr style="background-color: #f8f9fa;">
+                                        <th style="border: 1px solid #ddd; padding: 8px;">姓名</th>
+                                        <th style="border: 1px solid #ddd; padding: 8px;">年龄</th>
+                                        <th style="border: 1px solid #ddd; padding: 8px;">职业</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">张三</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">25</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">前端开发</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">李四</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">30</td>
+                                        <td style="border: 1px solid #ddd; padding: 8px;">后端开发</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4><ruby>表单元素<rt>Form Elements</rt></ruby></h4>
+                            <p>input 和 form 标签</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <form>
+                                    <label for="name">姓名：</label><br>
+                                    <input type="text" id="name" name="name" placeholder="请输入姓名" style="width: 100%; padding: 5px; margin: 5px 0;"><br>
+                                    
+                                    <label for="email">邮箱：</label><br>
+                                    <input type="email" id="email" name="email" placeholder="请输入邮箱" style="width: 100%; padding: 5px; margin: 5px 0;"><br>
+                                    
+                                    <label for="age">年龄：</label><br>
+                                    <input type="number" id="age" name="age" min="1" max="100" style="width: 100%; padding: 5px; margin: 5px 0;"><br>
+                                    
+                                    <button type="button" onclick="alert('表单提交成功！')" style="background-color: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">提交</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>语义化标签<rt>Semantic Tags</rt></ruby></h4>
+                            <p>HTML5 语义化元素</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                                <header style="background-color: #f8f9fa; padding: 10px; margin: 5px 0;">
+                                    <h5 style="margin: 0;">Header 区域</h5>
+                                </header>
+                                <nav style="background-color: #e9ecef; padding: 10px; margin: 5px 0;">
+                                    <span>Navigation 导航</span>
+                                </nav>
+                                <main style="background-color: #f8f9fa; padding: 10px; margin: 5px 0;">
+                                    <span>Main 主要内容</span>
+                                </main>
+                                <footer style="background-color: #e9ecef; padding: 10px; margin: 5px 0;">
+                                    <span>Footer 页脚</span>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>代码示例<rt>Code Example</rt></ruby></h4>
+                            <p>完整的HTML页面结构</p>
+                            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0; background-color: #f8f9fa;">
+                                <pre style="margin: 0; font-size: 12px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;我的网页&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;欢迎来到我的网站&lt;/h1&gt;
+    &lt;p&gt;这是一个段落。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Frontend for beginners. 学习前端开发的好地方。</p>
+        </div>
+    </footer>
+</body>
+</html>

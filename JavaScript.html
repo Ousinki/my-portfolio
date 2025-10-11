@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 基础 - Frontend for beginners</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Frontend for beginners</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="HTML.html">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="JavaScript.html" class="active">JavaScript</a></li>
+                    <li><a href="VSCode.html">VSCode</a></li>
+                    <li><a href="Linux.html">Linux</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>JavaScript 基础教程</h2>
+                <p>学习JavaScript，让网页动起来</p>
+                <p>内容来自<a href="../JavaScript入门经典（第7版）(（美）菲尔·巴拉德).pdf" target="_blank">JavaScript入门经典（第7版）(（美）菲尔·巴拉德).pdf</a></p>
+            </section>
+
+            <section class="features">
+                <div class="card">
+                    <h3>案例教学</h3>
+                    <p>以下是一些实际的JavaScript交互示例：</p><br>         
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4>鼠标悬停翻转图片</h4>
+                            <p>onmouseover & onmouseout</p>
+                            <!-- alt属性：当图片无法加载时显示的替代文本，也为视觉障碍用户提供图片内容描述 -->
+                            <img src="https://www.qgistutorials.com/en/_images/output4.png" 
+                                 alt="演示图片" 
+                                 width="200" height="150"
+                                 onmouseover="this.src='https://www.qgistutorials.com/en/_images/1108.png';"
+                                 onmouseout="this.src='https://www.qgistutorials.com/en/_images/output4.png';"
+                                 title="鼠标悬停查看效果" />
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4>点击弹出模态对话框</h4>
+                            <p>onClick</p>
+                            <input type="button" onclick="alert('普通的系统按钮外观，没有CSS类，使用浏览器默认样式')" value="Click Me" /><br><br>
+                            <button class="btn btn-primary" onclick="alert('美观的现代化按钮，应用了自定义CSS样式')">Click Me</button><br><br>
+                            <p>第一个用value属性设置文本<br>第二个用标签内容设置文本</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4>鼠标悬停提示信息</h4>
+                            <p>onMouseOver 事件处理器</p>
+                            <img src="https://www.qgistutorials.com/en/_images/2104.png" 
+                            alt="image 1" 
+                            width="200" height="150"
+                            onmouseover="alert('You entered the image!')" />
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>创建函数</h4>
+                            <p>函数名称区分大小写，<br>MyFunc() ≠ myFunc()</p>
+                            <script>
+                                function sayHello() {
+                                    alert("Hello");
+                                }
+                            </script>
+                            <input type="button" value="Say Hello" onclick="sayHello()" />
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>参数和实参</h4>
+                            <p>parameter & argument</p>
+                            <script>
+                                // 函数定义中的 name 是 parameter（参数）
+                                function greet(name) {
+                                    alert("你好, " + name + "!");
+                                }
+                            </script>
+                            <input type="button" value="问候" onclick="greet('张三')" />
+                            <!-- 调用时的 '张三' 是 argument（实参） -->
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>函数与参数</h4>
+                            <p>单个参数和多个参数</p>
+                            <script>
+                                function cube(x) {
+                                    alert(x * x * x);
+                                }
+                            </script>
+                            <input type="button" value="单个参数" onclick="cube(5)" style="margin-right: 20px;" /> 
+                            <!-- margin-right: 20px; 设置按钮的右边距为20像素 -->
+                            <script>
+                                function times(a, b) {
+                                   alert(a * b);
+                                }
+                            </script>
+                            <input type="button" value="多个参数" onclick="times(3, 4)" />
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>用多个参数调用一个函数</h4>
+                            <p>获取按钮的 id、name 和 value 属性</p>
+                            <script>
+                                // 获取按钮的 id、name 和 value 属性
+                                function buttonReport(buttonId, buttonName, buttonValue) { 
+                                var userMessage1 = "Button id: " + buttonId + "\n"; //按钮 id 信息
+                                var userMessage2 = "Button name: " + buttonName + "\n"; //按钮名称
+                                var userMessage3 = "Button value: " + buttonValue; //按钮值
+                                alert(userMessage1 + userMessage2 + userMessage3); //提醒用户
+                                }
+                            </script>
+                            <input type="button" id="id1" name="Left Hand Button" value="Left" onclick= "buttonReport(this.id, this.name, this.value)"/>
+                            <input type="button" id="id2" name="Center Button" value="Center" onclick= "buttonReport(this.id, this.name, this.value)"/>
+                            <input type="button" id="id3" name="Right Hand Button" value="Right" onclick= "buttonReport(this.id, this.name, this.value)"/>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4>函数返回值</h4>
+                            <p>return</p>
+                            <script>
+                                function cube(x) {
+                                    return x * x * x; // 返回值，没有这行会返回undefined
+                                }
+                            </script>
+                            <input type="button" value="alert弹窗" onclick="alert(cube(3))" />
+                            <input type="button" value="console输出" onclick="console.log(cube(3))" />
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>匿名函数<rt>Anonymous Function</rt></ruby></h4>
+                            <p>不需要给函数命名，直接定义一个函数<br>匿名函数本身没有名字，只是赋值给变量 sayHello</p>
+                            <script>
+                            </script>
+                            <input type="button" value="" onclick="" />
+                        </div>
+
+                        <div class="feature-card">
+                            <h4><ruby>函数提升<rt>Hoisting</rt></ruby></h4>
+                            <p><ruby>匿名函数<rt>Anonymous Func</rt></ruby> vs <ruby>命名函数<rt>Named Func</rt></ruby><br>只能先定义再调用 vs 可以调用后再定义</p>
+                            <script>
+                                console.log(SayHello()); // ❌ 报错！anonymous func不能提升，必须先定义再调用。
+                                // 匿名函数
+                                var SayHello = function() { 
+                                    alert("Hello"); 
+                                }; 
+                            </script>
+                            <input type="button" value="匿名函数" onclick="SayHello()" />
+                            <script>
+                                // console.log(sayhello()); // ✅ 正常工作
+                                // 命名函数
+                                function sayhello() {  // 命名函数，会被提升到顶部
+                                    alert("Hello");
+                                }
+                            </script>
+                            <input type="button" value="命名函数" onclick="sayhello()" />
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>练习</h4>
+                            <p>编写一个函数，接收摄氏度数值作为参数，返回相应的华氏度</p>
+                            <script>
+                                var cTemp = 100; // 摄氏度
+                                var hTemp = ((cTemp * 9) / 5) + 32; // 华氏度
+                            </script>
+                            <input type="button" value="摄氏度转华氏度" onclick="alert(hTemp)" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Frontend for beginners. 学习前端开发的好地方。</p>
+        </div>
+    </footer>
+</body>
+</html>
