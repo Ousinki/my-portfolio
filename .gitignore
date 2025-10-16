@@ -1,0 +1,16 @@
+# LaTeX 临时文件
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
+*.xdv
+*.pdf
+# Untitled-*.pdf  # 只忽略 Untitled 开头的 PDF
+
+# LaTeX minted 缓存
+_minted/
+
+# 系统文件
+.DS_Store
